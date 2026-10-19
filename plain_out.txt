@@ -1,0 +1,29 @@
+E:\ZZLMN Project\LUMENX\lumen-xhttp\tests\xhttp_e2e.py:130: RuntimeWarning: coroutine 'ensure_default_link' was never awaited
+  main.ensure_default_link()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+2026-10-19 14:43:03,949 [INFO] new XHTTP[packet-up] session [qYpobdjp] uuid=3b2e5f60 ip=127.0.0.1
+[packet-up]
+Traceback (most recent call last):
+  File "E:\ZZLMN Project\LUMENX\lumen-xhttp\tests\xhttp_e2e.py", line 152, in <module>
+2026-10-19 14:43:13,951 [INFO] closed XHTTP[packet-up] [qYpobdjp] total=0
+    status, hdr, body = http("GET", f"/v2/xhtx/packet-up/{UUID}")
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ZZLMN Project\LUMENX\lumen-xhttp\tests\xhttp_e2e.py", line 144, in http
+    return r.status, dict(r.headers), r.read()
+                                      ^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 466, in read
+    return self._read_chunked(amt)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 588, in _read_chunked
+    while (chunk_left := self._get_chunk_left()) is not None:
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 572, in _get_chunk_left
+    chunk_left = self._read_next_chunk_size()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\http\client.py", line 532, in _read_next_chunk_size
+    line = self.fp.readline(_MAXLINE + 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
